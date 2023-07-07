@@ -73,7 +73,7 @@ export default function Profile() {
               width: 37,
               height: 35,
               padding: 4,
-              borderRadius: "50%",
+              borderRadius: 50,
               fontSize: 35,
               backgroundColor: "wheat",
             }}
@@ -85,7 +85,7 @@ export default function Profile() {
               width: 37,
               height: 35,
               padding: 4,
-              borderRadius: "50%",
+              borderRadius: 50,
               fontSize: 35,
               backgroundColor: "wheat",
             }}
@@ -146,7 +146,7 @@ export default function Profile() {
               fontSize: 30,
               backgroundColor: "#ff004cb6",
               padding: 10,
-              borderRadius: "50%",
+              borderRadius:  50
             }}
           >
             <FontAwesomeIcon name="rocket" size={30} />
@@ -162,7 +162,7 @@ export default function Profile() {
               fontSize: 30,
               backgroundColor: "#ffc02eb0",
               padding: 10,
-              borderRadius: "50%",
+              borderRadius: 50
             }}
           >
             <FontAwesome5 name="brain" size={30} />
@@ -178,7 +178,7 @@ export default function Profile() {
               fontSize: 30,
               backgroundColor: "#536cfd8f",
               padding: 10,
-              borderRadius: "50%",
+              borderRadius:  50
             }}
           >
             <Ionicons name="medal-outline" size={30} />
