@@ -2,7 +2,7 @@ import { View, Text, Touchable, TouchableOpacity, Image } from "react-native";
 import React, { useEffect, useState } from "react";
 import { ScrollView } from "react-native-gesture-handler";
 import AntDesign from "react-native-vector-icons/AntDesign";
-import { Link, Stack } from "expo-router";
+import { Link } from "expo-router";
 // import SyncStorage from "sync-storage";
 
 export default function Home() {
@@ -40,118 +40,107 @@ export default function Home() {
     >
       {final === null ? (
         <ScrollView>
-          <TouchableOpacity
-            style={{
-              width: "100%",
-              minHeight: 300,
-              marginBottom: 30,
-              position: "relative",
-            }}
-          >
-            {/* <Link href="../AllCourse"> */}
-              <Stack>
-                <Stack.Screen
-                  name="index"
-                  options={{
-                    headerTitle: "Home Screen",
-                    headerTitleAlign: "center",
-                  }}
-                />
-              </Stack>
-              {/* <Text>QAAAsASAsaSASAsASAsASNews Three</Text>
-            </Link> */}
-            <View
+          <Link href="/profile/index">
+            <TouchableOpacity
               style={{
                 width: "100%",
+                minHeight: 300,
+                marginBottom: 30,
+                position: "relative",
               }}
             >
               <View
                 style={{
-                  width: "35%",
-                  padding: 5,
-                  position: "absolute",
-                  top: 10,
-                  left: 10,
-                  zIndex: 2,
-                  backgroundColor: "#10C8A0",
+                  width: "100%",
                 }}
               >
-                <Text
+                <View
                   style={{
-                    textAlign: "center",
-                    fontSize: 15,
-                    fontWeight: 600,
-                    color: "white",
+                    width: "35%",
+                    padding: 5,
+                    position: "absolute",
+                    top: 10,
+                    left: 10,
+                    zIndex: 2,
+                    backgroundColor: "#10C8A0",
                   }}
                 >
-                  Dasturlash
+                  <Text
+                    style={{
+                      textAlign: "center",
+                      fontSize: 15,
+                      fontWeight: 600,
+                      color: "white",
+                    }}
+                  >
+                    Dasturlash
+                  </Text>
+                </View>
+                <Image
+                  style={{
+                    width: "100%",
+                  }}
+                  source={require("../../img/download.png")}
+                />
+                <Text
+                  style={{
+                    width: "90%",
+                    fontSize: 20,
+                    flexDirection: "row",
+                    justifyContent: "center",
+                    margin: 15,
+                  }}
+                >
+                  Ishlab chiquvchilar uchun AWS: ECS va ko'p mintaqali yuklarni
+                  muvozanatlash
                 </Text>
-              </View>
-              <Image
-                style={{
-                  width: "100%",
-                }}
-                source={require("../../img/download.png")}
-              />
-              <Text
-                style={{
-                  width: "90%",
-                  fontSize: 20,
-                  flexDirection: "row",
-                  justifyContent: "center",
-                  margin: 15,
-                }}
-              >
-                Ishlab chiquvchilar uchun AWS: ECS va ko'p mintaqali yuklarni
-                muvozanatlash
-              </Text>
-              <View
-                style={{
-                  width: "100%",
-                  flexDirection: "row",
-                  justifyContent: "space-around",
-                  marginTop: 20,
-                }}
-              >
-                <View>
-                  <Text
-                    style={{
-                      fontSize: 15,
-                      fontWeight: 600,
-                      color: "gray",
-                    }}
-                  >
-                    Kurs hajmi
-                  </Text>
-                  <Text
-                    style={{
-                      fontSize: 20,
-                      fontWeight: 600,
-                    }}
-                  >
-                    38 soat
-                  </Text>
-                </View>
-                <View>
-                  <Text
-                    style={{
-                      fontSize: 15,
-                      fontWeight: 600,
-                      color: "gray",
-                    }}
-                  >
-                    Kurs bo’limlari
-                  </Text>
-                  <Text
-                    style={{
-                      fontSize: 20,
-                      fontWeight: 600,
-                    }}
-                  >
-                    5 ta bo’lim
-                  </Text>
-                </View>
-                {/* <View
+                <View
+                  style={{
+                    width: "100%",
+                    flexDirection: "row",
+                    justifyContent: "space-around",
+                    marginTop: 20,
+                  }}
+                >
+                  <View>
+                    <Text
+                      style={{
+                        fontSize: 15,
+                        fontWeight: 600,
+                        color: "gray",
+                      }}
+                    >
+                      Kurs hajmi
+                    </Text>
+                    <Text
+                      style={{
+                        fontSize: 20,
+                        fontWeight: 600,
+                      }}
+                    >
+                      38 soat
+                    </Text>
+                  </View>
+                  <View>
+                    <Text
+                      style={{
+                        fontSize: 15,
+                        fontWeight: 600,
+                        color: "gray",
+                      }}
+                    >
+                      Kurs bo’limlari
+                    </Text>
+                    <Text
+                      style={{
+                        fontSize: 20,
+                        fontWeight: 600,
+                      }}
+                    >
+                      5 ta bo’lim
+                    </Text>
+                  </View>
+                  {/* <View
                   style={{
                     backgroundColor: "#536cfd",
                     padding: 5,
@@ -160,9 +149,10 @@ export default function Home() {
                 >
                   <AntDesign name="arrowright" size={35} color="white" />
                 </View> */}
+                </View>
               </View>
-            </View>
-          </TouchableOpacity>
+            </TouchableOpacity>
+          </Link>
           <TouchableOpacity>
             <View
               style={{

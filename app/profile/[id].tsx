@@ -2,6 +2,7 @@ import { View, Text, Image  } from "react-native";
 import { Link, Stack, useSearchParams } from "expo-router";
 import Course from "../(tabs)/profile/Course";
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import Index from "../(tabs)/profile";
 
 const DetailsPage = () => {
     const { id } = useSearchParams();
@@ -17,7 +18,7 @@ var harif = '<-'
          />
       {/* <Text>My Details for: {id}</Text> */}
       {
-        id === 'course' || 2 ? (<Course />) : ('nottt')
+        id === 'course' ? (<Course />) : (<Index />)
       }
     </View>
   );
