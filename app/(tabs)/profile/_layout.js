@@ -59,7 +59,7 @@ export default function Profile() {
           justifyContent: "space-between",
         }}
       >
-        <Text>Oddiy foydalanuvchi</Text>
+        <Text>Обычный пользователь</Text>
         <View
           style={{
             width: "26%",
@@ -123,9 +123,7 @@ export default function Profile() {
       <Text>&nbsp;</Text>
       <Text>&nbsp;</Text>
       <View>
-        <Text style={{ textAlign: "center", fontSize: 20 }}>
-          Mening belgilarim:
-        </Text>
+        <Text style={{ textAlign: "center", fontSize: 20 }}>Мои знаки:</Text>
         <View
           style={{
             marginTop: 10,
@@ -199,7 +197,7 @@ export default function Profile() {
             fontSize: 20,
           }}
         >
-          Joriy balans
+          Текущий баланс
         </Text>
         <Text
           style={{
@@ -241,7 +239,7 @@ export default function Profile() {
           }}
         >
           <Text style={{ fontSize: 20, color: "white" }}>
-            Balans to'ldirish
+            Пополнение баланса
           </Text>
         </View>
       </View>
@@ -264,9 +262,7 @@ export default function Profile() {
               justifyContent: "center",
             }}
           >
-            <Text style={{ fontSize: 20, color: "white" }}>
-              Mening kurslarim
-            </Text>
+            <Text style={{ fontSize: 20, color: "white" }}>Мои курсы</Text>
           </View>
         </View>
       </Link>
