@@ -39,108 +39,106 @@ export default function Home() {
       }}
     >
       {final === null ? (
-        <ScrollView>
+        <ScrollView
+          style={{
+            width: "100%",
+            minHeight: 300,
+            marginBottom: 30,
+            position: "relative",
+          }}
+        >
           <Link href="/profile/index">
-            <TouchableOpacity
+            <View
               style={{
                 width: "100%",
-                minHeight: 300,
-                marginBottom: 30,
-                position: "relative",
               }}
             >
               <View
                 style={{
-                  width: "100%",
+                  width: "35%",
+                  padding: 5,
+                  position: "absolute",
+                  top: 10,
+                  left: 10,
+                  zIndex: 2,
+                  backgroundColor: "#10C8A0",
                 }}
               >
-                <View
-                  style={{
-                    width: "35%",
-                    padding: 5,
-                    position: "absolute",
-                    top: 10,
-                    left: 10,
-                    zIndex: 2,
-                    backgroundColor: "#10C8A0",
-                  }}
-                >
-                  <Text
-                    style={{
-                      textAlign: "center",
-                      fontSize: 15,
-                      fontWeight: 600,
-                      color: "white",
-                    }}
-                  >
-                    Dasturlash
-                  </Text>
-                </View>
-                <Image
-                  style={{
-                    width: "100%",
-                  }}
-                  source={require("../../img/download.png")}
-                />
                 <Text
                   style={{
-                    width: "90%",
-                    fontSize: 20,
-                    flexDirection: "row",
-                    justifyContent: "center",
-                    margin: 15,
+                    textAlign: "center",
+                    fontSize: 12,
+                    color: "white",
                   }}
                 >
-                  Ishlab chiquvchilar uchun AWS: ECS va ko'p mintaqali yuklarni
-                  muvozanatlash
+                  Программирование
                 </Text>
-                <View
-                  style={{
-                    width: "100%",
-                    flexDirection: "row",
-                    justifyContent: "space-around",
-                    marginTop: 20,
-                  }}
-                >
-                  <View>
-                    <Text
-                      style={{
-                        fontSize: 15,
-                        fontWeight: 600,
-                        color: "gray",
-                      }}
-                    >
-                      Kurs hajmi
-                    </Text>
-                    <Text
-                      style={{
-                        fontSize: 20,
-                        fontWeight: 600,
-                      }}
-                    >
-                      38 soat
-                    </Text>
-                  </View>
-                  <View>
-                    <Text
-                      style={{
-                        fontSize: 15,
-                        fontWeight: 600,
-                        color: "gray",
-                      }}
-                    >
-                      Kurs bo’limlari
-                    </Text>
-                    <Text
-                      style={{
-                        fontSize: 20,
-                        fontWeight: 600,
-                      }}
-                    >
-                      5 ta bo’lim
-                    </Text>
-                  </View>
-                  {/* <View
+              </View>
+              <Image
+                style={{
+                  width: "100%",
+                }}
+                source={require("../../img/download.png")}
+              />
+              <Text
+                style={{
+                  width: "90%",
+                  fontSize: 20,
+                  flexDirection: "row",
+                  justifyContent: "center",
+                  margin: 15,
+                }}
+              >
+                AWS для разработчиков: ECS и рабочие нагрузки в нескольких
+                регионах балансировка
+              </Text>
+              <View
+                style={{
+                  width: "100%",
+                  flexDirection: "row",
+                  justifyContent: "space-around",
+                  marginTop: 20,
+                }}
+              >
+                <View>
+                  <Text
+                    style={{
+                      fontSize: 15,
+                      fontWeight: 600,
+                      color: "gray",
+                    }}
+                  >
+                    Размер поля
+                  </Text>
+                  <Text
+                    style={{
+                      fontSize: 20,
+                      fontWeight: 600,
+                    }}
+                  >
+                    38 час
+                  </Text>
+                </View>
+                <View>
+                  <Text
+                    style={{
+                      fontSize: 15,
+                      fontWeight: 600,
+                      color: "gray",
+                    }}
+                  >
+                    Разделы курса
+                  </Text>
+                  <Text
+                    style={{
+                      fontSize: 20,
+                      fontWeight: 600,
+                    }}
+                  >
+                    5 секций
+                  </Text>
+                </View>
+                {/* <View
                   style={{
                     backgroundColor: "#536cfd",
                     padding: 5,
@@ -149,9 +147,8 @@ export default function Home() {
                 >
                   <AntDesign name="arrowright" size={35} color="white" />
                 </View> */}
-                </View>
               </View>
-            </TouchableOpacity>
+            </View>
           </Link>
           <TouchableOpacity>
             <View
@@ -182,7 +179,7 @@ export default function Home() {
                   margin: 20,
                 }}
               >
-                Yangi kurs qo'shish
+                Добавить новый курс
               </Text>
             </View>
           </TouchableOpacity>
