@@ -12,21 +12,21 @@ import Home from "./Home";
 // import Course from "./Course";
 import Setting from "./Setting";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import index from ".";
+import Mentor from "./Mentor";
 
 const Course = () => {
   const Tab = createMaterialTopTabNavigator();
 
   return (
-    <View>
-      <View>
-        <Tab.Navigator>
-          <Tab.Screen name="Mening kurslarim" component={Home} />
-          {/* <Tab.Screen name="Sertifikatlarim" component={Course} /> */}
-          <Tab.Screen name="Sertifikatlarim" component={Setting} />
-          <Tab.Screen name="A’zo mentorlarim" component={index} />
-        </Tab.Navigator>
-      </View>
+    <View style={{ width: "100%", height: "100%" }}>
+      {/* <View> */}
+      <Tab.Navigator>
+        <Tab.Screen name="Mening kurslarim" component={Home} />
+        {/* <Tab.Screen name="Sertifikatlarim" component={Course} /> */}
+        <Tab.Screen name="Sertifikatlarim" component={Setting} />
+        <Tab.Screen name="Mentorlarim" component={Mentor} />
+      </Tab.Navigator>
+      {/* </View> */}
     </View>
   );
 };

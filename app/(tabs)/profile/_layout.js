@@ -1,5 +1,13 @@
 import { Stack, Tabs, Link } from "expo-router";
-import { Text, ScrollView, View, Image, Button, TextInput } from "react-native";
+import {
+  Text,
+  ScrollView,
+  View,
+  Image,
+  Button,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
@@ -11,7 +19,10 @@ import settings from "../home/setting";
 import Home from "./Home";
 import Course from "./Course";
 import Setting from "./Setting";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { useEffect, useState } from "react";
+import axios from "axios";
+// import SyncStorage from "sync-storage";
+
 // const carouselItem = require("./carusel.json");
 
 // interface CarouselItems {
@@ -21,18 +32,22 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 // }
 
 export default function Profile() {
+  const [state1, setState1] = useState("Jonibek");
   var money = "1 350 000 UZS";
-  var name = "Jonibek";
-  const Tab = createMaterialTopTabNavigator();
 
-  //   const renderItems: React.FC<{ item: CarouselItems }> = ({ item }) => {
-  //     return (
-  //       <TouchableOpacity
-  //        onPress={() => console.log("click")}>
-  //         <Image />
-  //       </TouchableOpacity>
-  //     );
-  //   };
+  // const getApi = () => {
+  //   axios({
+  //     method: "GET",
+  //     url: `https://api.baracar.uz/auth/adress/`,
+  //   })
+  //     .then((res) => setState1(res.data))
+  //     .catch((err) => console.log(err));
+  // };
+
+  // useEffect(() => {
+  //   SyncStorage.set("zafar", state1);
+  //   // AsyncStorage.setItem("@MySuperStore:key", "I like to save it.");
+  // }, []);
 
   return (
     <ScrollView>
@@ -88,18 +103,21 @@ export default function Profile() {
           width: "100%",
         }}
       >
-        <Image
-          source={require("../../img/Ellipse.png")}
-          style={{ width: 150, height: 150 }}
-        />
+        <TouchableOpacity>
+          <Image
+            source={require("../../img/Ellipse.png")}
+            style={{ width: 150, height: 150 }}
+          />
+        </TouchableOpacity>
         <Text
           style={{
             fontSize: 40,
+            color: "black",
             // marginTop: 10,
             // marginBottom: 10
           }}
         >
-          {name}
+          {state1}
         </Text>
       </View>
       <Text>&nbsp;</Text>
@@ -121,8 +139,8 @@ export default function Profile() {
             style={{
               width: 52,
               shadowColor: "#000",
-              shadowOffset: { width: 5, height: 5 },
-              shadowOpacity: 0.35,
+              shadowOffset: { width: 3, height: 3 },
+              shadowOpacity: 0.3,
               shadowRadius: 3.84,
               elevation: 5,
               fontSize: 30,
@@ -204,7 +222,7 @@ export default function Profile() {
           style={{
             width: "25%",
             backgroundColor: "#536DFD",
-            padding: 5,
+            padding: 7,
             flexDirection: "row",
             justifyContent: "center",
           }}

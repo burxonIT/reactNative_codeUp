@@ -10,7 +10,7 @@ const StackLayout = () => {
             options={{
                 headerTitle: "Home Screen",
                 headerTitleAlign: "center",
-                headerLeft: () => <Image source={require("../../img/Group.png")} style={{ marginLeft: 10 }} />,
+                // headerLeft: () => <Image source={require("../../img/Group.png")} style={{ marginLeft: 10 }} />,
             }}
             />
         </Stack>

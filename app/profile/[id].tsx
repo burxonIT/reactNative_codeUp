@@ -17,7 +17,7 @@ var harif = '<-'
          />
       {/* <Text>My Details for: {id}</Text> */}
       {
-        id === 'course' ? (<Course />) : ('nottt')
+        id === 'course' || 2 ? (<Course />) : ('nottt')
       }
     </View>
   );
